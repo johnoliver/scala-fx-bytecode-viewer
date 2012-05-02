@@ -61,7 +61,6 @@ class SourceView(srcView: TextArea) {
 
     Platform.runLater(new Runnable() {
       def run(): Unit = {
-        srcView.positionCaret(start + 50)
         srcView.selectRange(start, end);
       }
     })
