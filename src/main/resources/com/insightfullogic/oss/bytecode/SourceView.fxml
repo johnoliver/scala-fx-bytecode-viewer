@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.Side?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.insightfullogic.oss.bytecode.SourceView">
+	<children>
+		<TextArea fx:id="srcView" />
+	</children>
+</HBox>

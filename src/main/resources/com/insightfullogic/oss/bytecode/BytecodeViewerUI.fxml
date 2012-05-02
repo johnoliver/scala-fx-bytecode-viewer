@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.insightfullogic.oss.bytecode.*?>
+
+<BorderPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml"
+	fx:controller="com.insightfullogic.oss.bytecode.BytecodeViewerUI">
+	<top>
+		<MenuBar>
+			<Menu text="File">
+				<items>
+					<MenuItem fx:id="openFile" text="Open File" />
+					<MenuItem fx:id="exit" text="Exit" />
+				</items>
+			</Menu>
+		</MenuBar>
+	</top>
+	<left>
+		<TreeView showRoot="false" fx:id="bytecodeTree" />
+	</left>
+	<center>
+		<TextArea fx:id="srcView" />
+	</center>
+</BorderPane>

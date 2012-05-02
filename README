@@ -1,0 +1,19 @@
+Before building a you will need to set the property in the pom.xml that points to your javafx home.
+
+Once this is done it should be compilable with standard maven commands:
+
+  mvn clean package
+
+(Maven 3 or greater is required)
+
+
+once packaged it can be executed with:
+
+  java -Djavafx.runtime.path=<location> -jar ./target/scala-fx-bytecode-viewer-1.0-SNAPSHOT-jar-with-dependencies.jar
+ 
+where javafx.runtime.path is set to the location of the java fx runtime, for instance:
+
+  ./javafx-sdk2.1.0-beta/rt/
+
+Note that a 32bit version of Java is also required.
+
