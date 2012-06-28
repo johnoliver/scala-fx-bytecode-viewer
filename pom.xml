@@ -11,11 +11,11 @@
 	<name>scala-fx-bytecode-viewer</name>
 
 	<properties>
-		<javafx.home>${user.home}/Projects/javafx-sdk2.1.0-beta/</javafx.home>
+		<javafx.home>${user.home}/Projects/javafx-sdk2.2.0-beta/</javafx.home>
 		
 		<exec.mainClass>com.insightfullogic.oss.bytecode.Main</exec.mainClass>
 		<javafx.runtime.lib.jar>${javafx.home}/rt/lib/jfxrt.jar</javafx.runtime.lib.jar>
-		<javafx.tools.ant.jar>${javafx.home}/tools/ant-javafx.jar</javafx.tools.ant.jar>
+		<javafx.tools.ant.jar>${javafx.home}/lib/ant-javafx.jar</javafx.tools.ant.jar>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -130,6 +130,21 @@
 					<jvmArgs>
 						<jvmArg>-Xss2m</jvmArg>
 					</jvmArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<configuration>
+					<mainClass>${exec.mainClass}</mainClass>
+					<classpathScope>compile</classpathScope>
+					<systemProperties>
+						<systemProperty>
+							<key>javafx.runtime.path</key>
+							<value>${javafx.home}/rt</value>
+						</systemProperty>
+					</systemProperties>
 				</configuration>
 			</plugin>
 			<plugin>
