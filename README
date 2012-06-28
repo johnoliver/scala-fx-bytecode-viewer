@@ -15,5 +15,3 @@ where javafx.runtime.path is set to the location of the java fx runtime, for ins
 
   ./javafx-sdk2.1.0-beta/rt/
 
-Note that a 32bit version of Java is also required.
-
